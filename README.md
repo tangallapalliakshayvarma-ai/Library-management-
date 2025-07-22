@@ -32,5 +32,27 @@ A simple and elegant web app built with Django to manage books in a library. You
 ```bash
 git clone https://github.com/tangallapalliakshayvarma-ai/Library-management-.git
 cd Library-management-
+
+2. Create Virtual Environment (Optional but Recommended)
+
+python -m venv venv
+venv\Scripts\activate  
+
+3. Install Dependencies
+
 pip install -r requirements.txt
+
+4. Apply Migrations
+
+python manage.py makemigrations
+python manage.py migrate
+
+5. Run the Django Development Server
+
 python manage.py runserver
+
+Visit in Browser
+
+Once the server is running, open your browser and go to:
+
+http://127.0.0.1:8000/
