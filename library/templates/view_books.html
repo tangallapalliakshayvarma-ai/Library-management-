@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>View Books</title>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; }
+    .container {
+      max-width: 800px; margin: 40px auto; background: white;
+      padding: 30px; border-radius: 10px;
+    }
+    table {
+      width: 100%; border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px; text-align: left; border-bottom: 1px solid #ccc;
+    }
+    th { background-color: #007bff; color: white; }
+    a { display: inline-block; margin-top: 20px; color: #007bff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>All Books</h2>
+    <table>
+      <tr><th>Title</th><th>Author</th><th>ISBN</th></tr>
+      {% for book in books %}
+      <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.isbn }}</td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="3">No books available.</td></tr>
+      {% endfor %}
+    </table>
+    <a href="/">← Back to Home</a>
+  </div>
+</body>
+</html>
