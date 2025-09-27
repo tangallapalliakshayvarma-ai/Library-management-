@@ -25,7 +25,7 @@ SECRET_KEY = '90xr2q1k^5)1z_4f$jx1uj1&!simq32p7#yi2+t0v!e=lgy%#&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["library-management.onrender.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -119,3 +119,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
